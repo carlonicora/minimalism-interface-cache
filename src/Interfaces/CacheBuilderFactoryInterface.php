@@ -1,7 +1,9 @@
 <?php
 namespace CarloNicora\Minimalism\Interfaces\Cache\Interfaces;
 
-interface CacheBuilderFactoryInterface
+use CarloNicora\Minimalism\Interfaces\SimpleObjectInterface;
+
+interface CacheBuilderFactoryInterface extends SimpleObjectInterface
 {
     /**
      * @param string $cacheName
