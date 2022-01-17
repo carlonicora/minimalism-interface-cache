@@ -8,7 +8,7 @@ interface CacheBuilderFactoryInterface
      * @param int|string $identifier
      * @return CacheBuilderInterface
      */
-    public function create(
+    public static function create(
         string $cacheName,
         int|string $identifier
     ): CacheBuilderInterface;
@@ -17,7 +17,7 @@ interface CacheBuilderFactoryInterface
      * @param string $key
      * @return CacheBuilderInterface
      */
-    public function createFromKey(
+    public static function createFromKey(
         string $key
     ): CacheBuilderInterface;
 
@@ -28,7 +28,7 @@ interface CacheBuilderFactoryInterface
      * @param bool $saveGranular
      * @return CacheBuilderInterface
      */
-    public function createList(
+    public static function createList(
         string $listName,
         string $cacheName,
         int|string $identifier,
