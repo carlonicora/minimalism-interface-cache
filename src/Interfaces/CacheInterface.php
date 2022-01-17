@@ -7,11 +7,6 @@ use CarloNicora\Minimalism\Interfaces\ServiceInterface;
 interface CacheInterface extends ServiceInterface
 {
     /**
-     * @return CacheBuilderFactoryInterface
-     */
-    public function getCacheBuilderFactory(): CacheBuilderFactoryInterface;
-
-    /**
      * @return bool
      */
     public function useCaching(): bool;
