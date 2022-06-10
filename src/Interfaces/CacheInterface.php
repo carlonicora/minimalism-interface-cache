@@ -43,4 +43,12 @@ interface CacheInterface extends ServiceInterface
      * @param CacheBuilderInterface $builder
      */
     public function invalidate(CacheBuilderInterface $builder): void;
+
+    /**
+     * @param string $baseFactory
+     * @return mixed
+     */
+    public function getBuilderFactory(
+        string $baseFactory,
+    ): string;
 }
