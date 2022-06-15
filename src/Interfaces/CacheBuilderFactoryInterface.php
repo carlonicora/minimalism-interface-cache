@@ -8,12 +8,12 @@ interface CacheBuilderFactoryInterface extends SimpleObjectInterface
     /**
      * @param string $cacheName
      * @param int|string $identifier
-     * @return CacheBuilderInterface
+     * @return CacheBuilderInterface|null
      */
     public static function create(
         string $cacheName,
         int|string $identifier
-    ): CacheBuilderInterface;
+    ): ?CacheBuilderInterface;
 
     /**
      * @param string $key

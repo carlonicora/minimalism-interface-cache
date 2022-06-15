@@ -24,13 +24,17 @@ abstract class AbstractCacheBuilderFactory implements CacheBuilderFactoryInterfa
     /**
      * @param string $cacheName
      * @param $identifier
-     * @return CacheBuilderInterface
+     * @return CacheBuilderInterface|null
      */
     public static function create(
         string $cacheName,
                $identifier
-    ): CacheBuilderInterface
+    ): ?CacheBuilderInterface
     {
+        if (!isset(self::$cache)){
+            return null;
+        }
+
         /** @var CacheBuilderFactoryInterface $implementationClass */
         $implementationClass = self::$cache->getBuilderFactory(__CLASS__);
         return $implementationClass::create($cacheName, $identifier);
